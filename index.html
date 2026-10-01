@@ -1,53 +1,152 @@
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-  body{background:#ff8fa3;overflow:auto;text-align:center;color:#fff;}
-  .page{position:absolute;width:100%;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;transition:opacity 1s;opacity:0;pointer-events:none;padding:20px}
-  .page.active{opacity:1;pointer-events:all}
-  h1{font-size:2.8rem;text-shadow:2px 2px #d6336c}
-  button{padding:12px 25px;border:none;border-radius:30px;background:#fff;color:#d6336c;font-size:1.1rem;cursor:pointer;margin-top:20px;font-weight:bold}
-  .cake{font-size:5rem;animation:bounce 1s infinite alternate}
-  @keyframes bounce{to{transform:translateY(-20px)}}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    background: #ff8fa3;
+    overflow: auto;
+    text-align: center;
+    color: #fff;
+  }
+  .page {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s;
+    opacity: 0;
+    pointer-events: none;
+    padding: 20px;
+  }
+  .page.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  h1 {
+    font-size: 2.8rem;
+    text-shadow: 2px 2px #d6336c;
+  }
+  button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #fff;
+    color: #d6336c;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  .cake {
+    font-size: 5rem;
+    animation: bounce 1s infinite alternate;
+  }
+  @keyframes bounce {
+    to {
+      transform: translateY(-20px);
+    }
+  }
 
   /* FLOATING PICTURE */
-  .my-pic{
-    width:200px;height:200px;object-fit:cover;border-radius:50%;
-    border:5px solid #fff;box-shadow:0 10px 25px rgba(0,0,0,.3);margin:15px 0;
+  .my-pic {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    margin: 15px 0;
     animation: float 3s ease-in-out infinite;
   }
-  @keyframes float{
-    0%{transform:translateY(0px)}
-    50%{transform:translateY(-18px)}
-    100%{transform:translateY(0px)}
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-18px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
   }
 
-  .card{background:#fff;color:#d6336c;width:90%;max-width:420px;padding:25px;border-radius:20px;line-height:auto;}
+  .card {
+    background: #fff;
+    color: #d6336c;
+    width: 90%;
+    max-width: 420px;
+    padding: 25px;
+    border-radius: 20px;
+    line-height: auto;
+  }
 </style>
 
 <audio id="bgMusic" loop>
-  <source src="https://musicbeats.net/wp-content/uploads/2023/07/Happy-Birthday-Instrumental-Beat-MP3-Download.mp3" type="audio/mpeg">
+  <source
+    src="https://musicbeats.net/wp-content/uploads/2023/07/Happy-Birthday-Instrumental-Beat-MP3-Download.mp3"
+    type="audio/mpeg"
+  />
 </audio>
 
 <div class="page active" id="p1">
   <div class="cake">🎂</div>
   <h1>Happy Birthday!</h1>
-  <img src="WhatsApp Image 2026-09-30 at 8.31.14 PM.jpeg" class="my-pic" alt="Birthday Person">
-  <button onclick="document.getElementById('bgMusic').play(); document.getElementById('p1').classList.remove('active'); document.getElementById('p2').classList.add('active')">Play Music & Open 🎵</button>
+  <img
+    src="WhatsApp Image 2026-09-30 at 8.31.14 PM.jpeg"
+    class="my-pic"
+    alt="Birthday Person"
+  />
+  <button
+    onclick="
+      document.getElementById('bgMusic').play();
+      document.getElementById('p1').classList.remove('active');
+      document.getElementById('p2').classList.add('active');
+    "
+  >
+    Play Music & Open 🎵
+  </button>
 </div>
 
 <div class="page" id="p2">
   <div class="card">
-    <img src="WhatsApp Image 2026-09-30 at 8.31.14 PM.jpeg" class="my-pic" style="width:130px;height:130px" alt="">
+    <img
+      src="WhatsApp Image 2026-09-30 at 8.31.14 PM.jpeg"
+      class="my-pic"
+      style="width: 130px; height: 130px"
+      alt=""
+    />
     <h2>To My Dearest,</h2>
-    <p style="margin:15px 0;font-size:1rem">
-    Happy Birthday, Daddy❤️! 🎉<br><br>
-    Today, I thank God for the precious gift of you. You are not just my father, you are my covering, my teacher, my strength, and my silent hero.I pray for you today.
-May the Almighty ALLAH bless you and keep you. May He cause His face to shine upon you and be gracious to you. May He grant you long life in good health, peace of mind, and joy that never fades.
-May every seed you have sown in tears, in sacrifice, in love for this family, return to you as a harvest of blessings. May your strength be renewed like the eagle’s, may your latter days be greater than your former, and may you live to eat the fruit of your labour in good health.
-Thank you for your prayers, your wisdom, your discipline, and your unconditional love. We are who we are because God gave us you.Happy Birthday, Dad. We love you deeply, we honor you always, and we celebrate you today and forever. Amin. ❤️.<br><br>
-    Celebrate big today — you deserve it! I love you so much. ❤️
+    <p style="margin: 15px 0; font-size: 1rem">
+      Happy Birthday, Daddy❤️! 🎉<br /><br />
+      Today, I thank God for the precious gift of you. You are not just my
+      father, you are my covering, my teacher, my strength, and my silent hero.I
+      pray for you today. May the Almighty ALLAH bless you and keep you. May He
+      cause His face to shine upon you and be gracious to you. May He grant you
+      long life in good health, peace of mind, and joy that never fades. May
+      every seed you have sown in tears, in sacrifice, in love for this family,
+      return to you as a harvest of blessings. May your strength be renewed like
+      the eagle’s, may your latter days be greater than your former, and may you
+      live to eat the fruit of your labour in good health. Thank you for your
+      prayers, your wisdom, your discipline, and your unconditional love. We are
+      who we are because God gave us you.Happy Birthday, Dad. We love you
+      deeply, we honor you always, and we celebrate you today and forever. Amin.
+      ❤️.<br /><br />
+      Celebrate big today — you deserve it! I love you so much. ❤️
     </p>
     <b>- Happy Birthday once again dad</b>
   </div>
-  <button onclick="document.getElementById('p2').classList.remove('active'); document.getElementById('p1').classList.add('active')">Back</button>
+  <button
+    onclick="
+      document.getElementById('p2').classList.remove('active');
+      document.getElementById('p1').classList.add('active');
+    "
+  >
+    Back
+  </button>
 </div>
-
